@@ -1,10 +1,12 @@
 from flask import render_template, redirect, url_for, request
-from . import app
+from . import app, models
 
 @app.route('/')
 def accueil():
-    return render_template('accueil.html', title='George Carlin Website - Accueil')
+    liste_categories = models.categorie.query.all()
+    return render_template('accueil.html', title='George Carlin Website', liste_cat=liste_categories,typecat=type(liste_categories))
 
-@app.route('/produits')
-def catalogue_de_produits():
-    return '<h2>Nos produits :</h2>'
+@app.route('/categorie')
+def categorie():
+    liste_categories = models.categorie.query.all()
+    return render_template('categorie.html', title='George Carlin Website - Produits', liste_cat=liste_categories, typecat=type(liste_categories))
