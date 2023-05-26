@@ -9,12 +9,11 @@
 
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img loading="lazy" src="/static/images/{{ cat.pic }}" alt="image"/>
+                            <img loading="lazy" src="/static/images/{{ cat.pic }}" alt="image" style="height: 18rem"/>
                             <div class="card-body">
                                 <p class="card-text text-center">
                                     <span class="titre">
-                                        {{ cat.id_categorie }}.{{ cat.nom_categorie }}
-                                        <!-- TODO Add link to filter products by category -->
+                                        <a href="{{ url_for('produits_categorie') }}?id_categorie={{ cat.id_categorie}}">{{ cat.nom_categorie }}</a>
                                     </span>
                                     </span>
                                 </p>
