@@ -18,4 +18,13 @@ def produits_categorie():
 
     return render_template('produits_categorie.html', title='Nos produits', produits=liste_produits,  typeprod=type(liste_produits) , attributs=liste_attributs, typeatr=type(liste_attributs))
 
+@app.route('/tous_produits')
+def tous_produits():
+    liste_produits = models.produit.query.order_by(models.produit.id_categorie).all()
+    liste_attributs = models.vue_attributs.query.all()
 
+    return render_template('tous_produits.html', title='Nos produits', produits=liste_produits,  typeprod=type(liste_produits), attributs=liste_attributs, typeatr=type(liste_attributs))
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About')

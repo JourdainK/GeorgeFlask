@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center pt-5">Tous nos produits :</h2>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+                {% for prod in produits %}
+                    <div class="col">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Catégorie : {% if prod.id_categorie == 1 %} Dvd {% elif prod.id_categorie == 2 %}
+                                    Livres {% else %} Goodies {% endif %}<br/>
+                                    <img loading="lazy" src="/static/{{ prod.photo }}" alt="image"
+                                         style="width: 12rem;">
+                                    <span class="titre">
+                                    {{ prod.nom_categorie }}
+                                </span><br>
+                                    {{ prod.nom_produit }} <br> {{ prod.prix }} €
+                                    <br> {{ prod.description }}
+                                </p>
+
+                                <p>
+
+
+                                    {% for atr in attributs %}
+                                        {% if atr.id_produit == prod.id_produit %}
+
+                                            {{ atr.nom_attribut }}: {{ atr.valeur }}
+                                            {% if atr.nom_attribut == 'duree' %} minutes {% endif %}
+
+                                            <br/>
+                                        {% endif %}
+
+                                    {% endfor %}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

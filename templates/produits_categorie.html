@@ -1,32 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h2 class="text-center">{{ produits[0].nom_categorie }}</h2>
 
-    <h2>Votre sélection : {{ produits[0].nom_categorie }}</h2>
+    <div class="album py-5 bg-light pt-5">
+        <h2 class="text-center">{{ produits[0].nom_categorie }}</h2>
 
-    <div class="album py-5 bg-light">
+        <h2>Votre sélection : {{ produits[0].nom_categorie }}</h2>
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
                 {% for prod in produits %}
                     <div class="col">
                         <div class="card shadow-sm align-items-center">
-                            {{ prod.nom_categorie }}
                             <img loading="lazy" src="/static/{{ prod.photo }}" alt="image" style="width: 12rem" />
                             <div class="card-body">
-                                <h3 class="titre">
+                                <h3 class="titre text-center">
                                     {{ prod.nom_produit }}
                                 </h3>
                                 <p class="card-text">
-                                    {{ prod.prix }} €<br>
-
                                     {{ prod.description }}
-
+                                </p>
+                                <p class="card-text fw-bold text-center">
+                                    Prix :  {{ prod.prix }} €
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     {% for atr in attributs %}
                                         {% if atr.id_produit == prod.id_produit %}
 
-                                                {{ atr.nom_attribut }}: {{ atr.valeur }}
+                                                {{ atr.nom_attribut }}: {{ atr.valeur }} {% if atr.nom_attribut == 'duree' %} minutes {% endif %}
 
                                             <br/>
                                         {% endif %}
