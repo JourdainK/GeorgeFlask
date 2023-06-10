@@ -8,15 +8,10 @@ h2{
  body {
     color: white;
     background-color: black;
+     background-image: linear-gradient(to right, rgba(8, 8, 8, 0.823), rgba(255, 123, 0, 0.728));
     font-family: Georgia,Arial, Tahoma;
 }
 
- .album {
-     color: white;
-    background-color: black;
-    background-image: linear-gradient(to right, rgba(8, 8, 8, 0.823), rgba(255, 123, 0, 0.728));
-    font-family: Georgia,Arial, Tahoma;
- }
 
  .navbar{
     padding: 1%;

@@ -2,102 +2,112 @@
 {% block content %}
     <br><br>
 
-    <div class="album py-5 bg-light pt-5">
-        <h2 class="text-center text-decoration-underline">Bienvenue</h2>
-        <div class="container pt-5">
-            <div class="row">
-                <h2 class="text-center text-decoration-underline">Biographie</h2>
-                <div class="col-6">
-                    <p class="text-center">
-                        George Carlin, né le 12 mai 1937 à New-York et mort le 22 juin 2008 à Santa-Monica (Californie),
-                        était
-                        un
-                        humoriste, critique social et acteur américain.
-                        <br><br>
-                        Considéré comme l'un des humoristes (stand-up) les plus importants de tous les temps, il fut
-                        surnommé
-                        "Le
-                        doyen des humoristes de la contre-culture".<br>Connu pour son humour noir, ses réflexions sur la
-                        politique,
-                        ses observations sur le langage, la psychologie, les religions et sur les sujets taboux.
-                        Il fut d'ailleurs arrêté en 1972 pour avoir joué le sketch "The seven dirty words" (Disponible
-                        dans
-                        l'onglet
-                        vidéo de ce site), au Milwaukee's Summerfest et chargé d'avoir enfreint la loi locale sur la
-                        diffusion
-                        de
-                        contenus obscènes. L'affaire fut par la suite classée "sans suite", le juge déclarant que ces
-                        propos
-                        étaient
-                        "certes indécents", mais n'enfreignait pas la loi, car ceux-ci ne provoquaient pas de désordre
-                        public.
+    <div class="container">
+        <div class="album py-5 pt-5">
+            <h2 class="text-center text-decoration-underline">Bienvenue</h2>
+            <div class="container pt-5">
+                <div class="row">
+                    <h2 class="text-center text-decoration-underline">Biographie</h2>
+                    <div class="col-6">
+                        <p class="text-center">
+                            George Carlin, né le 12 mai 1937 à New-York et mort le 22 juin 2008 à Santa-Monica
+                            (Californie),
+                            était
+                            un
+                            humoriste, critique social et acteur américain.
+                            <br><br>
+                            Considéré comme l'un des humoristes (stand-up) les plus importants de tous les temps, il fut
+                            surnommé
+                            "Le
+                            doyen des humoristes de la contre-culture".<br>Connu pour son humour noir, ses réflexions
+                            sur la
+                            politique,
+                            ses observations sur le langage, la psychologie, les religions et sur les sujets taboux.
+                            Il fut d'ailleurs arrêté en 1972 pour avoir joué le sketch "The seven dirty words"
+                            (Disponible
+                            dans
+                            l'onglet
+                            vidéo de ce site), au Milwaukee's Summerfest et chargé d'avoir enfreint la loi locale sur la
+                            diffusion
+                            de
+                            contenus obscènes. L'affaire fut par la suite classée "sans suite", le juge déclarant que
+                            ces
+                            propos
+                            étaient
+                            "certes indécents", mais n'enfreignait pas la loi, car ceux-ci ne provoquaient pas de
+                            désordre
+                            public.
 
-                        <br>
-                    <div class="text-center">
-                        <img title="Arrestation de George Carlin" src="static/images/arrest.webp"
-                             style="width: 26rem"><br>
+                            <br>
+                        <div class="text-center">
+                            <img title="Arrestation de George Carlin" src="static/images/arrest.webp"
+                                 style="width: 26rem"><br>
+                        </div>
+                        </p>
                     </div>
-                    </p>
-                </div>
 
-                <div class="col-6">
-                    <p class="text-center">
+                    <div class="col-6">
+                        <p class="text-center">
 
-                        Ce sketch à par la suite fait l'objet d'un jugement de la cour suprême des États-unis (FCC vs
-                        pacifica
-                        foundation), dans lequel la décision de censurer certaines émissions (radio/tv) par le
-                        gouvernement
-                        était
-                        légal, afin de protéger les enfants de contenus offensants (source :
-                        <a href="https://en.wikipedia.org/wiki/FCC_v._Pacifica_Foundation">Wikipédia</a>).
-                        Depuis son premier Stand-up pour HBO en 1977,les sketches de G. Carlin tournent autour de la
-                        critique
-                        socioculturelle de la société américaine.
-                        <br><br>
-                        Son dernier spectacle ("It's bad for ya", 2008) fut filmé moins de 4 mois avant sa mort.
-                        <br><br>
-                        Le Rolling stone magazine l'a classé 2e dans son Top 50 des meilleurs comédiens de tous les
-                        temps.
+                            Ce sketch à par la suite fait l'objet d'un jugement de la cour suprême des États-unis (FCC
+                            vs
+                            pacifica
+                            foundation), dans lequel la décision de censurer certaines émissions (radio/tv) par le
+                            gouvernement
+                            était
+                            légal, afin de protéger les enfants de contenus offensants (source :
+                            <a href="https://en.wikipedia.org/wiki/FCC_v._Pacifica_Foundation">Wikipédia</a>).
+                            Depuis son premier Stand-up pour HBO en 1977,les sketches de G. Carlin tournent autour de la
+                            critique
+                            socioculturelle de la société américaine.
+                            <br><br>
+                            Son dernier spectacle ("It's bad for ya", 2008) fut filmé moins de 4 mois avant sa mort.
+                            <br><br>
+                            Le Rolling stone magazine l'a classé 2e dans son Top 50 des meilleurs comédiens de tous les
+                            temps.
 
 
+                            <br>
+                        <div class="text-center">
+                            <img class="rounded img-fluid title=" src="static/images/FCClaw.jpg" style="width: 26rem">
+                        </div>
                         <br>
-                    <div class="text-center">
-                        <img class="rounded img-fluid title=" src="static/images/FCClaw.jpg" style="width: 26rem">
+
+
+                        </p>
                     </div>
-                    <br>
 
-
-                    </p>
                 </div>
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 pt-5">
+                    {% for cat in liste_cat %}
 
-            </div>
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 pt-5">
-                {% for cat in liste_cat %}
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img loading="lazy" src="/static/images/{{ cat.pic }}" alt="image" style="height: 18rem"/>
-                            <div class="card-body">
-                                <p class="card-text text-center">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img loading="lazy" src="/static/images/{{ cat.pic }}" alt="image"
+                                     style="height: 18rem"/>
+                                <div class="card-body">
+                                    <p class="card-text text-center">
                                     <span class="titre">
-                                        <a class="link_cat" href="{{ url_for('produits_categorie') }}?id_categorie={{ cat.id_categorie }}">{{ cat.nom_categorie }}</a>
+                                        <a class="link_cat"
+                                           href="{{ url_for('produits_categorie') }}?id_categorie={{ cat.id_categorie }}">{{ cat.nom_categorie }}</a>
                                     </span>
-                                    </span>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group" id="remove_a">
-                                    </div>
-                                    <div class="btn-group">
+                                        </span>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group" id="remove_a">
+                                        </div>
+                                        <div class="btn-group">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                {% endfor %}
+                    {% endfor %}
+
+                </div>
 
             </div>
-
         </div>
     </div>
 {% endblock %}
